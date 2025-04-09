@@ -91,9 +91,6 @@ polling-app/
 
 ---
 
-## ✨ Screenshots
-
-> (Optional) Add UI preview images or Cypress test run screenshots here
 
 ---
 
