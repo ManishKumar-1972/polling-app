@@ -91,6 +91,11 @@ polling-app/
 
 ---
 
+## ✨ Screenshots
+
+> Sample Cypress Test Run:
+
+![Cypress Test Screenshot](./screenshots/cypress-tests.png)
 
 ---
 

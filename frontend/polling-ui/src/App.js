@@ -1,10 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PollList from "./components/PollList";
 import CreatePoll from "./components/CreatePoll";
 import VotePoll from "./components/VotePoll";
 import ResultsPoll from "./components/ResultsPoll"; // NEW import
 import Header from "./components/Header";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
