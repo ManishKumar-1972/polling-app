@@ -1,0 +1,15 @@
+# Backend build
+/backend/polling-backend/target/
+
+# Frontend build
+/frontend/polling-ui/node_modules/
+/frontend/polling-ui/build/
+
+# IDE/editor config
+.idea/
+.vscode/
+*.iml
+
+# System files
+.DS_Store
+*.log

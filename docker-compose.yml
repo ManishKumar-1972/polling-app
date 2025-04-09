@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  mysql-db:
+    image: mysql:8
+    container_name: mysql-polling-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pollingdb
+    ports:
+      - "3308:3306"
+    volumes:
+      - polling_mysql_data:/var/lib/mysql
+
+  backend:
+    build: ./backend/polling-backend
+    container_name: polling-backend
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/pollingdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  frontend:
+    build: ./frontend/polling-ui
+    container_name: polling-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  polling_mysql_data:
